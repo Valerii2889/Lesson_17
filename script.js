@@ -1,88 +1,159 @@
-// const instruments = [
-//   {
-//     id: 1,
-//     img: "https://static.dnipro-m.ua/cache/products/4878/catalog_origin_269592.jpg",
-//     name: "Шуруповерт",
-//     price: 150,
-//     description:
-//       "Мережевий дриль-шуруповерт TD-30 — надійний помічник для робіт по дому та в невеликій майстерні, якщо необхідно виконувати роботу переважно з закручування кріпильних елементів. Муфта регулювання крутного моменту робить інструмент універсальним вибором як для свердління, так і для роботи з кріпленнями.",
-//   },
-//   {
-//     id: 2,
-//     img: "https://static.dnipro-m.ua/cache/products/5098/catalog_origin_195568.jpg",
-//     name: "Перфоратор",
-//     price: 3948,
-//     description:
-//       "Перфоратор бочковий Dnipro-M ВН-20 використовується для виконання широкого спектру будівельних і ремонтних робіт: буріння та свердління отворів, розмішування будівельних сумішей, демонтажу і т.д.",
-//   },
-//   {
-//     id: 3,
-//     img: "https://static.dnipro-m.ua/cache/products/1248/catalog_origin_257336.jpg",
-//     name: "Шліфмашина",
-//     price: 1299,
-//     description:
-//       "Кутова шліфувальна машина Dnipro-M GS-98 – модель, яка поєднує в собі оптимальне співвідношення потужності, ваги та мобільності. Конструкція шліфмашини сприяє зручній та надійній роботі, навіть однією рукою. Інструмент ідеально підходить для виконання різу на висоті та використання у важкодоступних місцях. Низький рівень шуму та вібрації, двопозиційне розташування додаткової рукоятки під кутом 100 градусів, мінімізує втому під час шліфування.",
-//   },
-//   {
-//     id: 4,
-//     img: "https://static.dnipro-m.ua/cache/products/5596/catalog_origin_191105.jpg",
-//     name: "Пила",
-//     price: 11049,
-//     description:
-//       "Мобільна акумуляторна ланцюгова пила DCS-200BC DUAL призначена для обрізання зайвих гілок, спилювання дерев та чагарника, заготівлі дров, покрою будматеріалів та демонтажних робіт. Її просто використовувати у будь-яких місцях: на висоті, на виїзних роботах, у лісі або саду. При цьому Вам не потрібно буде турбуватися про підключення до мережі.",
-//   },
-//   {
-//     id: 5,
-//     img: "https://static.dnipro-m.ua/cache/products/2300/catalog_origin_261037.jpg",
-//     name: "Рівень",
-//     price: 897,
-//     description:
-//       "Рівень серії ProVision виробництва DNIPRO-M має не тільки високу точність вимірювань і чудові захисні властивості, а й надає максимальний комфорт користувачеві в процесі експлуатації.",
-//   },
-//   {
-//     id: 6,
-//     img: "https://static.dnipro-m.ua/cache/products/6566/catalog_origin_270253.jpg",
-//     name: "Тример",
-//     price: 3699,
-//     description:
-//       "Тример електричний Dnipro-M 110 призначений для покосу густої трави, а також кущів з діаметром стовбура до 10 мм.",
-//   },
-//   {
-//     id: 7,
-//     img: "https://static.dnipro-m.ua/cache/products/6483/catalog_origin_270227.jpg",
-//     name: "Мотокоса",
-//     price: 11049,
-//     description:
-//       "Мотокоса Dnipro-M 43 призначена для покосу трави, чагарників, бур'янів, газонів, а також для заготівлі сіна в невеликих масштабах.    Використовується для польових робіт на садовій ділянці площею до 2000 м2.",
-//   },
-//   {
-//     id: 8,
-//     img: "https://static.dnipro-m.ua/cache/products/2741/catalog_origin_271775.jpg",
-//     name: "Генератор",
-//     price: 10890,
-//     description:
-//       "Бензиновий генератор GX-25 номінальною потужністю 2,5 кВт забезпечить автономність побутових приладів на дачі або у приватному будинку. Ви зможете одночасно підключити до нього освітлення, холодильник, зарядку телефону, ноутбук та водяний насос.",
-//   },
-// ];
+// https://bool.dev/blog/detail/obyasnenie-event-loop-v-javascript-s-pomoshchyu-vizualizatsii
+// https://www.jscamp.app/ru/docs/javascript25/
+// https://uk.wikipedia.org/wiki/%D0%A7%D0%B0%D1%81_Unix
 
-// setItem - додати значення
-// getItem
-// removeItem
-// clear
-// localStorage.setItem('TEST_KEY',JSON.stringify([1,2,3,4]))
+// console.log('start');
+// setTimeout(()=>{console.log('setTimeout');},0)
+// console.log('finish');
+// console.time('test async')
 
-// localStorage.setItem('TEST_KEY_1',JSON.stringify({name: 'hello'}))
-// console.log(JSON.parse(localStorage.getItem('TEST_KEY_1')));
-// // localStorage.removeItem('TEST_KEY_1')
-// localStorage.clear()
+// console.log("start");
 
-const local = document.querySelector(".js-local");
-const session = document.querySelector(".js-session");
+// setTimeout(() => {
+//   console.log("setTimeout");
+// }, 0);
 
-local.addEventListener("click", () => {
-  localStorage.setItem("local", "test local");
-});
+// for (let i = 0; i < 100000; i += 1) {
+//     console.log('value', i);
+// }
 
-session.addEventListener("click", () => {
-  sessionStorage.setItem("session", "test session");
-});
+// console.timeEnd('test async')
+
+// const date = new Date();
+// console.log(date);
+
+// const namesOfMonth = ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];
+
+// const arrDay = ['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четвер', 'П`ятниця', 'Субота'];
+// console.log(namesOfMonth[date.getMonth()]);
+
+// console.log(arrDay[date.getDay()]);
+// console.log('new Date()',date);
+// const currentDate = Date.now()
+
+// console.log('Date.now()',currentDate);
+
+// const box = document.querySelector(".js-box");
+// const titleTimer = document.querySelector(".js-timer");
+// let counter = 11;
+// setTimeout(() => {
+//   box.style.display = "block";
+
+//   const id = setInterval(() => {
+//     counter -= 1;
+//     titleTimer.textContent = counter;
+
+//     if (!counter) {
+//       //!counter counter === 0
+//       clearInterval(id);
+//       titleTimer.textContent = "X";
+//       titleTimer.addEventListener("click", onClick);
+//       // box.style.display = "none";
+//     }
+//   }, 1000);
+
+// }, 5000);
+
+// function onClick() {
+//   box.style.display = "none";
+// }
+
+const day = document.querySelector(".date-day");
+const date = document.querySelector(".date");
+const month = document.querySelector(".date-month");
+const year = document.querySelector(".date-year");
+const digitalClock = document.querySelector(".digital-clock");
+const arrowSecond = document.querySelector(".clock-seconds__arrow");
+const arrowMinutes = document.querySelector(".clock-minutes__arrow");
+const arrowHours = document.querySelector(".clock-hours__arrow");
+
+const namesOfMonth = [
+  "Січень",
+  "Лютий",
+  "Березень",
+  "Квітень",
+  "Травень",
+  "Червень",
+  "Липень",
+  "Серпень",
+  "Вересень",
+  "Жовтень",
+  "Листопад",
+  "Грудень",
+];
+
+const arrDay = [
+  "Неділя",
+  "Понеділок",
+  "Вівторок",
+  "Середа",
+  "Четвер",
+  "П`ятниця",
+  "Субота",
+];
+
+setInterval(() => {
+  const currentTime = new Date();
+  const currentDay = arrDay[currentTime.getDay()];
+  const currentDate = currentTime.getDate();
+  const currentMonth = namesOfMonth[currentTime.getMonth()];
+  const currentYear = currentTime.getFullYear();
+  const currentHour = currentTime.getHours();
+  const currentMinutes = currentTime.getMinutes();
+  const currentSeconds = currentTime.getSeconds();
+
+  const changeSeconds = (360 / 60) * currentSeconds;
+  const changeMinutes = (360 / 60) * currentMinutes;
+  const changeHours =(360 / 12) * currentHour + (360 / 12 / 60) * currentMinutes;
+
+  console.log(changeSeconds);
+  const formatTime = `${currentHour
+    .toString()
+    .padStart(2, "0")} : ${currentMinutes
+    .toString()
+    .padStart(2, "0")} : ${currentSeconds.toString().padStart(2, "0")}`;
+
+  day.textContent = currentDay;
+  date.textContent = currentDate;
+  month.textContent = currentMonth;
+  year.textContent = currentYear;
+
+  digitalClock.textContent = `Поточний час: ${formatTime}`;
+
+  arrowSecond.style.transform = `rotate(${changeSeconds}deg)`;
+  arrowMinutes.style.transform = `rotate(${changeMinutes}deg)`;
+  arrowHours.style.transform = `rotate(${changeHours}deg)`;
+}, 1000);
+
+// // console.log(currentYear);
+
+// const currentTime = new Date();
+
+
+// const targetDate = new Date('4/11/2023')
+
+// setInterval(()=>{
+//     const currentDate = new Date();
+
+//     console.log(convertMs(targetDate - currentDate));
+// },1000)
+
+
+// function convertMs(ms) {
+//     // Number of milliseconds per unit of time
+//     const second = 1000;
+//     const minute = second * 60;
+//     const hour = minute * 60;
+//     const day = hour * 24;
+  
+//     // Remaining days
+//     const days = Math.floor(ms / day);
+//     // Remaining hours
+//     const hours = Math.floor((ms % day) / hour);
+//     // Remaining minutes
+//     const minutes = Math.floor(((ms % day) % hour) / minute);
+//     // Remaining seconds
+//     const seconds = Math.floor((((ms % day) % hour) % minute) / second);
+  
+//     return { days, hours, minutes, seconds };
+//   }
